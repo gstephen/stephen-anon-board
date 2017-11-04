@@ -20,6 +20,7 @@ class App extends Component {
     this.handleLike = this.handleLike.bind(this);
     this.handleDislike = this.handleDislike.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.newMessage = this.newMessage.bind(this);
   }
 
   handleLike(id) {
@@ -48,8 +49,8 @@ class App extends Component {
     })
   }
 
-  newMessage(text) {
-    const message = { id: uuid.v4(), text: text, likes: 0}
+  newMessage(content) {
+    const message = { id: uuid.v4(), text: content, likes: 0}
 
     this.state.messages.push(message)
 
@@ -63,9 +64,7 @@ class App extends Component {
     <div className="App">
     <Header title={"Stephens Message Board"} />
     <div className="container">
-      <Post
-        newMessage={this.handleSubmit}
-      />
+      <Post newMessage={this.newMessage} />
 
       <div className="panel-group">
         <div className="panel panel-default">
