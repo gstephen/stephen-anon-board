@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class Sort extends Component {
+class Sortascdec extends Component {
   constructor(props) {
     super(props)
 
@@ -26,4 +26,4 @@ class Sort extends Component {
   }
 }
 
-export default Sort
+export default Sortascdec
