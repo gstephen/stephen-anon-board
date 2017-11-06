@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import ReactDOM from 'react-dom';
 
 class Post extends Component {
   constructor(props) {
@@ -8,15 +7,12 @@ class Post extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleSubmit(e) {
-    //Below line - is it needed?
-    e.preventDefault()
-    console.log(this.inputContent);
-    const content = this.inputContent.value.trim()
+  handleSubmit() {
+    const content = this.input.value.trim()
 
     this.props.newMessage(content)
 
-    this.inputContent.value = ""
+    this.input.value = ""
   }
 
   render() {
@@ -27,7 +23,7 @@ class Post extends Component {
           <div className="panel-body">
             <div className="form-group">
               <label>Message:</label>
-              <textarea ref={(input) => {this.inputContent = input}} id="message" type="text" className="form-control"></textarea>
+              <textarea ref={(input) => {this.input = input}} id="message" type="text" className="form-control"></textarea>
             </div>
             <button id="submit" className="btn btn-default" onClick={this.handleSubmit}>Post to board</button>
           </div>

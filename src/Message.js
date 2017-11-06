@@ -4,10 +4,6 @@ class Message extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      count: 1
-    }
-
     this.handleThumbsUp = this.handleThumbsUp.bind(this)
     this.handleThumbsDown = this.handleThumbsDown.bind(this)
     this.handleDelete = this.handleDelete.bind(this)

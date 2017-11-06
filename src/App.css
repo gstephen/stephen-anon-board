@@ -30,6 +30,32 @@
   float: none;
 }
 
+.panel-align {
+  display: flex;
+  background: #ddd;
+}
+
+.panel-align .panel-heading {
+  flex-grow: 0.59;
+  text-align: right
+}
+
+.panel-align .sorting {
+  text-align: center;
+  flex-grow: 0.43;
+}
+
+.panel-align .sorting span {
+  font-size: 14px;
+  display: inline-block;
+  padding: 10px;
+  float: right;
+}
+
+.fa {
+  padding-left: 5px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
