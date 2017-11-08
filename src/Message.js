@@ -3,10 +3,6 @@ import React, {Component} from 'react'
 class Message extends Component {
   constructor(props) {
     super(props)
-
-    this.handleThumbsUp = this.handleThumbsUp.bind(this)
-    this.handleThumbsDown = this.handleThumbsDown.bind(this)
-    this.handleDelete = this.handleDelete.bind(this)
   }
 
   handleThumbsUp() {
@@ -25,9 +21,9 @@ class Message extends Component {
     return(
       <li id={this.props.id} key={this.props.id}>
         {this.props.text}
-        <i onClick = {this.handleDelete} className="fa fa-trash pull-right delete"></i>
-        <i onClick = {this.handleThumbsDown} className="fa fa-thumbs-down pull-right"></i>
-        <i onClick = {this.handleThumbsUp} className="fa fa-thumbs-up pull-right"></i>
+        <i onClick = {this.handleDelete.bind(this)} className="fa fa-trash pull-right delete"></i>
+        <i onClick = {this.handleThumbsDown.bind(this)} className="fa fa-thumbs-down pull-right"></i>
+        <i onClick = {this.handleThumbsUp.bind(this)} className="fa fa-thumbs-up pull-right"></i>
         <div className="pull-right">{this.props.likes}</div>
       </li>
     )

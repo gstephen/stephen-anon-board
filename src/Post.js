@@ -4,7 +4,6 @@ class Post extends Component {
   constructor(props) {
     super(props)
 
-    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit() {
@@ -25,7 +24,7 @@ class Post extends Component {
               <label>Message:</label>
               <textarea ref={(input) => {this.input = input}} id="message" type="text" className="form-control"></textarea>
             </div>
-            <button id="submit" className="btn btn-default" onClick={this.handleSubmit}>Post to board</button>
+            <button id="submit" className="btn btn-default" onClick={this.handleSubmit.bind(this)}>Post to board</button>
           </div>
         </div>
       </div>

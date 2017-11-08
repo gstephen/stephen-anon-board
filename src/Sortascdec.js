@@ -3,9 +3,6 @@ import React, {Component} from 'react'
 class Sortascdec extends Component {
   constructor(props) {
     super(props)
-
-    this.sortAsc = this.sortAsc.bind(this)
-    this.sortDsc = this.sortDsc.bind(this)
   }
 
   sortAsc() {
@@ -19,8 +16,8 @@ class Sortascdec extends Component {
   render() {
     return (
       <div className ="sorting">
-        <span id="sortascending" onClick={this.sortAsc}>Sort ASC<i className="fa fa-angle-up" aria-hidden="true"></i></span>
-        <span id="sortdescending" onClick={this.sortDsc}>Sort DSC<i className="fa fa-angle-down" aria-hidden="true"></i></span>
+        <span id="sortascending" onClick={this.sortAsc.bind(this)}>Sort ASC<i className="fa fa-angle-up" aria-hidden="true"></i></span>
+        <span id="sortdescending" onClick={this.sortDsc.bind(this)}>Sort DSC<i className="fa fa-angle-down" aria-hidden="true"></i></span>
       </div>
     )
   }

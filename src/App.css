@@ -37,7 +37,7 @@
 
 .panel-align .panel-heading {
   flex-grow: 0.59;
-  text-align: right
+  text-align: right;
 }
 
 .panel-align .sorting {
@@ -68,7 +68,19 @@
   padding-right: 10px;
 }
 
+.panel-search {
+  box-shadow: none;
+}
+
+.search-bar {
+  width: 100%;
+}
+
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
