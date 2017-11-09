@@ -117,6 +117,7 @@ class App extends Component {
     });
   }
 
+  //Add new message to array to see sort new/old working
   handleSortOld() {
     var sortMessage = this.state.messages;
 
@@ -129,6 +130,7 @@ class App extends Component {
     });
   }
 
+  //Add new message to array to see sort new/old working
   handleSortNew() {
     var sortMessage = this.state.messages;
 
